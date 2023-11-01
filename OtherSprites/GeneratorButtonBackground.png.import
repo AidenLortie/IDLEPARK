@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cd5a1rs61qhsl"
+path="res://.godot/imported/GeneratorButtonBackground.png-bce5ecfc5d1fbdbc7b37af631ef74cd1.res"
+
+[deps]
+
+source_file="res://OtherSprites/GeneratorButtonBackground.png"
+dest_files=["res://.godot/imported/GeneratorButtonBackground.png-bce5ecfc5d1fbdbc7b37af631ef74cd1.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="IDLEPARK"
+run/main_scene="res://Scenes/Main.tscn"
+config/features=PackedStringArray("4.0")
+run/max_fps=30
+boot_splash/bg_color=Color(0.329412, 0.713726, 0.490196, 1)
+boot_splash/image="res://OtherSprites/IdleParkLogoShortTall10x.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://Scenes/icon.png"
+config/windows_native_icon="res://OtherSprites/IDLEPARKLOGO_SQUARE.ico"
+boot_splash/minimum_display_time=1000
+
+[display]
+
+window/size/viewport_width=1120
+window/size/viewport_height=672
+window/stretch/mode="canvas_items"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_environment="res://Scenes/default_env.tres"
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true

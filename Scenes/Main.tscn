@@ -1,0 +1,283 @@
+[gd_scene load_steps=27 format=3 uid="uid://u65pg3dneuqn"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_omury"]
+[ext_resource type="Texture2D" uid="uid://daelpiay1agve" path="res://OtherSprites/Background.png" id="2_q7w6d"]
+[ext_resource type="Texture2D" uid="uid://sk510duowuql" path="res://Icon Sprites/SnackStand.png" id="3_ona33"]
+[ext_resource type="Texture2D" uid="uid://cailwfed5ku8v" path="res://Icon Sprites/SnackStandPressed.png" id="4_1hlxb"]
+[ext_resource type="Texture2D" uid="uid://cvbhsn2ahxoob" path="res://Icon Sprites/GenButtonDeactivated.png" id="5_2gwp5"]
+[ext_resource type="Texture2D" uid="uid://drgs5qtnky26" path="res://Icon Sprites/Toilet.png" id="6_f7q7j"]
+[ext_resource type="Texture2D" uid="uid://b631g37dj5nhb" path="res://Icon Sprites/ToiletPressed.png" id="7_q28tg"]
+[ext_resource type="Texture2D" uid="uid://xdefh10s27o2" path="res://Icon Sprites/Camera.png" id="8_nlop1"]
+[ext_resource type="Texture2D" uid="uid://c4n328y5eod2i" path="res://Icon Sprites/CameraPressed.png" id="9_3bdkq"]
+[ext_resource type="Texture2D" uid="uid://dh8gksfl1ctlo" path="res://Icon Sprites/SmallAttraction.png" id="10_m3lau"]
+[ext_resource type="Texture2D" uid="uid://qdobbt081f8m" path="res://Icon Sprites/SmallAttractionPressed.png" id="11_6xeir"]
+[ext_resource type="Texture2D" uid="uid://ctxbvnfw7amht" path="res://Icon Sprites/LargeAttraction.png" id="12_oiv3n"]
+[ext_resource type="Texture2D" uid="uid://i2cmiho7u13b" path="res://Icon Sprites/LargeAttractionPressed.png" id="13_gnexu"]
+[ext_resource type="Texture2D" uid="uid://bovecfvevdx03" path="res://Icon Sprites/WoodenCoaster.png" id="14_pqc3v"]
+[ext_resource type="Texture2D" uid="uid://bje0r8m1yhrcq" path="res://Icon Sprites/WoodenCoasterPressed.png" id="15_6yils"]
+[ext_resource type="Texture2D" uid="uid://df22iop1uuhho" path="res://Icon Sprites/SteelCoaster.png" id="16_135dt"]
+[ext_resource type="Texture2D" uid="uid://msphndd1ihpx" path="res://Icon Sprites/SteelCoasterPressed.png" id="17_66smp"]
+[ext_resource type="Texture2D" uid="uid://cany4lnjaq5o4" path="res://OtherSprites/ButtonMain.png" id="18_cseir"]
+[ext_resource type="Texture2D" uid="uid://bss02tsn1rdx6" path="res://OtherSprites/ButtonMainPressed.png" id="19_ajx8a"]
+[ext_resource type="Texture2D" uid="uid://dqpy60fdmbvyh" path="res://OtherSprites/ProgressBarBack.png" id="20_13jym"]
+[ext_resource type="Texture2D" uid="uid://b25js8wm4gubq" path="res://OtherSprites/ProgressBarFillFun.png" id="21_6gc6m"]
+[ext_resource type="Texture2D" uid="uid://duqrllmf6syre" path="res://OtherSprites/LoadButton.png" id="22_s1jws"]
+[ext_resource type="Texture2D" uid="uid://ca37od8i0x0kt" path="res://OtherSprites/LoadButtonPressed.png" id="23_5arp3"]
+[ext_resource type="Texture2D" uid="uid://bib8vx60lpcad" path="res://OtherSprites/SaveButton.png" id="24_6rwl2"]
+[ext_resource type="Texture2D" uid="uid://8htnj0qcfh2h" path="res://OtherSprites/SaveButtonPressed.png" id="25_7ip7i"]
+[ext_resource type="Texture2D" uid="uid://cku8bbmky7a0c" path="res://OtherSprites/IdleParkLogoLong.png" id="26_rwby8"]
+
+[node name="Control" type="Node"]
+script = ExtResource("1_omury")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(560, 336)
+texture = ExtResource("2_q7w6d")
+
+[node name="btnSnackStand" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 16.0
+offset_right = 1100.0
+offset_bottom = 104.0
+texture_normal = ExtResource("3_ona33")
+texture_pressed = ExtResource("4_1hlxb")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblSnackStand" type="RichTextLabel" parent="btnSnackStand"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 268.0
+offset_bottom = 88.0
+bbcode_enabled = true
+text = "[b]SNACK STAND [/b][font_size=14]
+Cost:
+Currently Owned:
+Production rate:
+[/font_size]"
+
+[node name="btnToilet" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 108.0
+offset_right = 1108.0
+offset_bottom = 196.0
+disabled = true
+texture_normal = ExtResource("6_f7q7j")
+texture_pressed = ExtResource("7_q28tg")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblToilet" type="RichTextLabel" parent="btnToilet"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 268.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 100"
+
+[node name="btnCamera" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 200.0
+offset_right = 1100.0
+offset_bottom = 288.0
+disabled = true
+texture_normal = ExtResource("8_nlop1")
+texture_pressed = ExtResource("9_3bdkq")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblCamera" type="RichTextLabel" parent="btnCamera"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 95.0
+offset_right = 268.0
+offset_bottom = 88.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 500"
+
+[node name="btnSmallAttraction" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 292.0
+offset_right = 1100.0
+offset_bottom = 380.0
+disabled = true
+texture_normal = ExtResource("10_m3lau")
+texture_pressed = ExtResource("11_6xeir")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblSmallAttraction" type="RichTextLabel" parent="btnSmallAttraction"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 268.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 5000"
+
+[node name="btnLargeAttraction" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 384.0
+offset_right = 1100.0
+offset_bottom = 472.0
+disabled = true
+texture_normal = ExtResource("12_oiv3n")
+texture_pressed = ExtResource("13_gnexu")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblLargeAttraction" type="RichTextLabel" parent="btnLargeAttraction"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 268.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 10000"
+
+[node name="btnWoodenCoaster" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 476.0
+offset_right = 1100.0
+offset_bottom = 564.0
+disabled = true
+texture_normal = ExtResource("14_pqc3v")
+texture_pressed = ExtResource("15_6yils")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblWoodenCoaster" type="RichTextLabel" parent="btnWoodenCoaster"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 268.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 50000"
+
+[node name="btnSteelCoaster" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 844.0
+offset_top = 568.0
+offset_right = 1112.0
+offset_bottom = 656.0
+disabled = true
+texture_normal = ExtResource("16_135dt")
+texture_pressed = ExtResource("17_66smp")
+texture_disabled = ExtResource("5_2gwp5")
+stretch_mode = 4
+
+[node name="lblSteelCoaster" type="RichTextLabel" parent="btnSteelCoaster"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 264.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[b]UNKNOWN [/b][font_size=14]
+Unlocks at $ 100000"
+
+[node name="btnMain" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 416.0
+offset_top = 488.0
+offset_right = 736.0
+offset_bottom = 648.0
+texture_normal = ExtResource("18_cseir")
+texture_pressed = ExtResource("19_ajx8a")
+stretch_mode = 5
+
+[node name="lblMainMoney" type="RichTextLabel" parent="btnMain"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.012
+offset_top = -68.0
+offset_right = 300.16
+bbcode_enabled = true
+text = "[center][font_size=30]Money: $ [/font_size]
+Rate:  0/s[/center]"
+
+[node name="timBaseTimer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[node name="pgbGuestHappiness" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = 32.0
+offset_top = 608.0
+offset_right = 224.0
+offset_bottom = 640.0
+texture_under = ExtResource("20_13jym")
+texture_progress = ExtResource("21_6gc6m")
+
+[node name="lblGuestHappiness" type="RichTextLabel" parent="pgbGuestHappiness"]
+texture_filter = 1
+layout_mode = 0
+offset_top = -24.0
+offset_right = 192.0
+offset_bottom = 8.0
+bbcode_enabled = true
+text = "[center] [b]Guests:  [/b][font_size=14] 0/0 [/font_size][/center]"
+
+[node name="Load Button" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 752.0
+offset_top = 584.0
+offset_right = 816.0
+offset_bottom = 648.0
+texture_normal = ExtResource("22_s1jws")
+texture_pressed = ExtResource("23_5arp3")
+
+[node name="SaveButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 752.0
+offset_top = 504.0
+offset_right = 816.0
+offset_bottom = 568.0
+texture_normal = ExtResource("24_6rwl2")
+texture_pressed = ExtResource("25_7ip7i")
+
+[node name="IdleParkLogoLong" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(560, 52)
+texture = ExtResource("26_rwby8")
+
+[node name="lblOutput" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 288.0
+offset_bottom = 116.0
+bbcode_enabled = true
+text = "[b][font_size=13][/font_size][/b]"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1105.0
+offset_top = 8.0
+offset_right = 1112.0
+offset_bottom = 93.0
+
+[connection signal="button_down" from="btnSnackStand" to="." method="_on_btn_snack_stand_button_down"]
+[connection signal="button_down" from="btnToilet" to="." method="_on_btn_toilet_button_down"]
+[connection signal="button_down" from="btnCamera" to="." method="_on_btn_camera_button_down"]
+[connection signal="button_down" from="btnSmallAttraction" to="." method="_on_btn_small_attraction_button_down"]
+[connection signal="button_down" from="btnLargeAttraction" to="." method="_on_btn_large_attraction_button_down"]
+[connection signal="button_down" from="btnWoodenCoaster" to="." method="_on_btn_wooden_coaster_button_down"]
+[connection signal="button_down" from="btnSteelCoaster" to="." method="_on_btn_steel_coaster_button_down"]
+[connection signal="button_down" from="btnMain" to="." method="_on_btn_main_button_down"]
+[connection signal="timeout" from="timBaseTimer" to="." method="_timer_out"]
+[connection signal="button_down" from="Load Button" to="." method="_load"]
+[connection signal="button_down" from="SaveButton" to="." method="_save"]
